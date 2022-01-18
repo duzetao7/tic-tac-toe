@@ -6,6 +6,7 @@
 #define ROW 3
 #define COL 3
 
+
 void gotoxy(short x, short y);//
 
 void Menu();//菜单
@@ -27,3 +28,5 @@ void playercheck(char board[][COL], int row, int col, int* pcount, int* Case);//
 void computercheck(char board[][COL], int row, int col, int* pcount, int* Case);//电脑下棋
 
 char Iswin(char board[][COL], int row, int col, int* pcount);//判断游戏是否继续
+
+void printscore(float p_score, float c_score, int round);//计分板
