@@ -311,12 +311,12 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 		}
 		else if (board[1][2] == board[2][0] && board[1][2] == 'X')//玩家左下角 右边
 		{
-			board[1][0] = 'O';
+			board[0][1] = 'O';
 			*Case = 36;
 		}
 		else if (board[0][1] == board[2][2] && board[0][1] == 'X')//玩家右下角 上边
 		{
-			board[0][1] = 'O';
+			board[1][0] = 'O';
 			*Case = 37;
 		}
 		else if (board[1][0] == board[2][2] && board[1][0] == 'X')//玩家右下角 左边
@@ -809,10 +809,34 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 					board[0][2] = 'O';
 				break;
 			case 12:
-				if (board[1][2] != 'X')
+				if (board[0][2] != 'X')
+					board[0][2] = 'O';
+				else
+					board[2][0] = 'O';
+				break;
+			case 13:
+				if (board[1][0] != 'X')
+					board[1][0] = 'O';
+				else
+					board[2][1] = 'O';
+				break;
+			case 14:
+				if (board[0][1] != 'X')
+					board[0][1] = 'O';
+				else
 					board[1][2] = 'O';
+				break;
+			case 15:
+				if (board[2][0] != 'X')
+					board[2][0] = 'O';
 				else
 					board[0][2] = 'O';
+				break;
+			case 16:
+				if (board[0][2] != 'X')
+					board[0][2] = 'O';
+				else
+					board[2][0] = 'O';
 				break;
 			case 2://=6
 				if (board[0][2] != 'X')
@@ -1213,10 +1237,23 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 				board[1][0] = 'O';
 			break;
 		case 12:
-			if (board[2][2] != 'X')
-				board[2][2] = 'O';
+			if (board[2][1] != 'X')
+				board[2][1] = 'O';
 			else
-				board[0][2] = 'O';
+				board[0][1] = 'O';
+			break;
+		case 15:
+			if (board[0][1] != 'X')
+				board[0][1] = 'O';
+			else
+				board[2][1] = 'O';
+			break;
+		case 16:
+			if (board[1][0] != 'X')
+				board[1][0] = 'O';
+			else
+				board[1][2] = 'O';
+			break;
 		}
 	}
 	*pcount += 1;
