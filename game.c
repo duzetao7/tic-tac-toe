@@ -647,16 +647,16 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 			}
 			case 41:
 			{
-				if (board[2][1] != 'X')//避免玩家不堵
-					board[2][1] = 'O';
+				if (board[1][2] != 'X')//避免玩家不堵
+					board[1][2] = 'O';
 				else
-					board[2][0] = 'O';
+					board[0][2] = 'O';
 				break;
 			}
 			case 42:
 			{
-				if (board[2][1] != 'X')//避免玩家不堵
-					board[2][1] = 'O';
+				if (board[1][2] != 'X')//避免玩家不堵
+					board[1][2] = 'O';
 				else
 					board[2][2] = 'O';
 				break;
@@ -1028,7 +1028,7 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 				if (board[0][0] != 'X')//避免玩家不堵
 					board[0][0] = 'O';
 				else
-					board[0][2] = 'O';
+					board[1][0] = 'O';
 				break;
 			}
 			case 37:
@@ -1049,10 +1049,10 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 			}
 			case 41:
 			{
-				if (board[0][2] != 'X')//避免玩家不堵
-					board[0][2] = 'O';
+				if (board[2][0] != 'X')//避免玩家不堵
+					board[2][0] = 'O';
 				else
-					board[1][2] = 'O';
+					board[2][1] = 'O';
 				break;
 			}
 			case 42:
@@ -1060,7 +1060,7 @@ void computercheck(char board[][COL], int row, int col, int* pcount, int* Case)
 				if (board[0][0] != 'X')//避免玩家不堵
 					board[0][0] = 'O';
 				else
-					board[1][0] = 'O';
+					board[0][1] = 'O';
 				break;
 			}
 			case 61:
